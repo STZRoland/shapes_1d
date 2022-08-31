@@ -9,7 +9,7 @@ from shapes_1d.shapes import Shapes
 LENGTH = 100
 WIDTH_RANGE = (10, 30, 1)
 HEIGHT_RANGE = (0.5, 1.05, 0.05)
-POSITION_RANGE = (0, 70, 2)
+POSITION_RANGE = (15, 85, 2)
 
 
 def create_dataset(save_folder: Path):
@@ -24,6 +24,10 @@ def create_dataset(save_folder: Path):
     widths_labels = np.linspace(0, 1, len(widths))
     heights_labels = np.linspace(0, 1, len(heights))
     positions_labels = np.linspace(0, 1, len(positions))
+
+    widths_labels = np.round(widths_labels, decimals=5)
+    positions_labels = np.round(positions_labels, decimals=5)
+    heights_labels = np.round(heights_labels, decimals=2)
 
     n_samples = len(widths) * len(heights) * len(positions) * len(shapes)
 

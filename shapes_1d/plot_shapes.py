@@ -1,16 +1,15 @@
-import numpy as np
 import matplotlib.pyplot as plt
 
 from shapes import *
 
 
-values = (100, 20, 1.0, 40)
+values = (100, 21, 1.0, 50)
 
 vector_0 = create_rectangle(*values)
 vector_1 = create_triangle(*values)
 vector_2 = create_inv_triangle(*values)
-vector_3 = create_parabola(*values)
-vector_4 = create_inv_parabola(*values)
+vector_3 = create_half_circle(*values)
+vector_4 = create_inv_half_circle(*values)
 
 
 fig, axs = plt.subplots(5, 1, figsize=(9, 4))
