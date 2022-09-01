@@ -30,7 +30,7 @@ def create_half_circle(length: int, width: int, height: float, position: int) ->
 
 
 def create_inv_half_circle(length: int, width: int, height: float, position: int) -> np.ndarray:
-    half_1 = 1 - np.sqrt(1 - (np.linspace(1, 0, math.ceil(width / 2)) ** 2)) * height
+    half_1 = (1 - np.sqrt(1 - (np.linspace(1, 0, math.ceil(width / 2)) ** 2))) * height
     half_2 = half_1[::-1]
     return _create_vector(half_1, half_2, width, position, length)
 
